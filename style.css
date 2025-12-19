@@ -82,18 +82,20 @@ body {
 
 /* Back button in top-left (grey, Times New Roman) */
 #back-button {
-  position: fixed;
+  position: absolute;
   top: 12px;
   left: 12px;
-  background: #cfcfcf; /* light grey */
-  color: #111; /* dark text for contrast */
-  text-decoration: none;
-  padding: 8px 12px;
+  background: #222;
+  color: white;
+  border: 1px solid #555;
+  cursor: pointer;
+  padding: 6px 10px;
   border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 16px;
+  font-size: 14px;
+  font-family: sans-serif;
   z-index: 9999;
+  transition: background 0.2s;
+  text-decoration: none;
 }
 
 #back-button:hover {
