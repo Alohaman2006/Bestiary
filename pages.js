@@ -30,9 +30,9 @@ const pages = [
         name: "Mana-Beasts",
         page: 11,
         species: [
-          { name: "Phoenix", page: 12 },
-          { name: "Dragon", page: 13 },
-          { name: "Unicorn", page: 14 }
+          { name: "Dragon", page: 12 },
+          { name: "Terravor", page: 13 },
+          { name: "Crab", page: 14 }
         ]
       }
     ]
