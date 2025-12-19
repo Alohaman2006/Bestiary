@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: #1b1b1b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#book-wrapper {
+  width: 1200px;
+  height: 800px;
+  position: relative;
+}
+
+#book {
+  width: 100%;
+  height: 100%;
+}
+
+.page {
+  background: #f4ecd8;
+  padding: 40px;
+  box-sizing: border-box;
+  font-family: serif;
+}
+
+.cover {
+  background: #4b2e1e;
+  color: #f0e6d2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+}
+
+.contents a {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.page-counter {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: serif;
+  font-size: 14px;
+  color: #4b2e1e;
+  pointer-events: none;
+  z-index: 10;
+}
+
+#bookmark {
+  position: absolute;
+  top: -100px;
+  left: 120%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 160px;
+  background: linear-gradient(
+    to bottom,
+    #7b1e1e,
+    #4a0f0f
+  );
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 90%,
+    50% 100%,
+    0 90%
+  );
+  box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Optional hover feedback */
+#bookmark:hover {
+  transform: translateX(-50%) translateY(4px);
+}
+
+/* Back button in top-left (grey, Times New Roman) */
+#back-button {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  background: #cfcfcf; /* light grey */
+  color: #111; /* dark text for contrast */
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+  z-index: 9999;
+}
+
+#back-button:hover {
+  transform: translateY(1px);
+  background: #bfbfbf;
+}
