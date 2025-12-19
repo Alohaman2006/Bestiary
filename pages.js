@@ -106,14 +106,6 @@ const pages = [
   },
     {
         type: "page",
-        title: "Phoenix",
-        text: `A legendary fire spirit.
-        
-        Born from flame and eternal rebirth,
-        the phoenix symbolizes renewal and power.`
-    },
-    {
-        type: "page",
         title: "Dragon",
         text: `The mightiest of all creatures.
         
@@ -122,11 +114,16 @@ const pages = [
     },
     {
         type: "page",
-        title: "Unicorn",
-        text: `A magical and rare being.
+        title: "Terravor",
+        text: `The mightiest of all creatures.
         
-        Shrouded in mystery and wonder,
-        unicorns embody pure magical essence.`
+        Ancient and terrible, Terravors possess
+        immeasurable power and wisdom.`
+    },
+    {
+        type: "page",
+        title: "Crab",
+        text: `Crab`
     },
 
   {
