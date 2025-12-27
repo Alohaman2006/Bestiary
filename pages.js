@@ -94,3 +94,19 @@ const pages = [
     content: "— END OF VOLUME —"
   }
 ];
+
+//To-do:
+//Wolfs
+//bears
+//foxes
+//chickecs
+//cows
+//sheep
+//cat-like
+//bird
+//fish?
+
+//dragons - dragon, wyvern, drake, wyrm
+//terravors - wendhyr, ursavor, cervavor, lupavor, gravavor, corvavor
+//Latrian crab
+//Broodcore
