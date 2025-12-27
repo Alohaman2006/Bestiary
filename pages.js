@@ -8,31 +8,20 @@ const pages = [
     type: "contents",
     title: "Contents",
     sections: [
-        {
-        name: "Sapients",
-        page: 3,
-        species: [
-          { name: "Elf", page: 4 },
-          { name: "Dwarf", page: 5 },
-          { name: "Human", page: 6 }
-        ]
-      },
       {
         name: "Beasts",
-        page: 7,
         species: [
-          { name: "Wolf", page: 8 },
-          { name: "Bear", page: 9 },
-          { name: "Eagle", page: 10 }
+          { name: "Wolf" },
+          { name: "Bear" },
+          { name: "Eagle" }
         ]
       },
       {
         name: "Mana-Beasts",
-        page: 11,
         species: [
-          { name: "Dragon", page: 12 },
-          { name: "Terravor", page: 13 },
-          { name: "Crab", page: 14 }
+          { name: "Dragon" },
+          { name: "Terravor" },
+          { name: "Crab" }
         ]
       }
     ]
@@ -41,50 +30,18 @@ const pages = [
  // Pages
   {
     type: "page",
-    title: "Sapients",
-    text: "..."
-  },
-    {
-        type: "page",
-        title: "Human",
-        text: `Adaptable and resourceful.
-        
-        Though short-lived, humans achieve great things
-        through determination and ingenuity.`
-    },
-    {
-        type: "page",
-        title: "Elf",
-        text: `An ancient and graceful people.
-        
-        Long-lived and wise, elves have mastered
-        the arcane arts over millennia.`
-    },
-    {
-        type: "page",
-        title: "Dwarf",
-        text: `Masters of stone and metal.
-        
-        Renowned for their craftsmanship and fortitude,
-        dwarves build enduring kingdoms beneath the earth.`
-    },
-
-  {
-    type: "page",
     title: "Beasts",
     text: "..."
   },
     {
         type: "page",
-        title: "Wolf",
-        text: `A fierce beast of the wild.
-        
-        Known for their pack hunting strategies and loyalty,
-        wolves are among the most feared predators.`
+        title: "Wolf — Canis Lupus",
+        text: `
+        `
     },
     {
         type: "page",
-        title: "Bear",
+        title: "Bear — Ursine",
         text: `A powerful creature.
         
         With immense strength and resilience,

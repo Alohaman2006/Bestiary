@@ -58,11 +58,53 @@ pages.forEach((p, idx) => {
     el.classList.add("contents");
     let html = `<h1>${p.title}</h1>`;
     if (p.sections) {
-      // Render sections with subsections
+      // Build a map of exact titles -> data for quick lookup
+      const pageMap = {};
+      let contentPageCounter = 0;
+      pages.forEach((page, pageIdx) => {
+        if (page.type !== "cover") contentPageCounter++;
+        if (page.type === "page" && page.title) {
+          pageMap[page.title] = {
+            arrayIdx: pageIdx,
+            contentPageNum: contentPageCounter
+          };
+        }
+      });
+
+      // Helper to find page data by name with fallbacks (exact, includes, startsWith)
+      const findPageData = name => {
+        if (!name) return null;
+        if (pageMap[name]) return pageMap[name];
+        const lower = name.toLowerCase();
+        // try includes or startsWith on page titles
+        for (let i = 0, c = 0; i < pages.length; i++) {
+          const page = pages[i];
+          if (page.type !== "cover") c++;
+          if (page.type === "page" && page.title) {
+            const t = page.title.toLowerCase();
+            if (t === lower || t.includes(lower) || t.startsWith(lower) || lower.startsWith(t)) {
+              return { arrayIdx: i, contentPageNum: c };
+            }
+          }
+        }
+        return null;
+      };
+
+      // Render sections with subsections, calculating pages automatically
       p.sections.forEach(section => {
-        html += `<h2><a data-page="${section.page}">${section.name} — Page ${toRomanNumeral(section.page)}</a></h2><ul>`;
+        const sectionData = findPageData(section.name);
+        if (sectionData) {
+          html += `<h2><a data-page="${sectionData.arrayIdx}">${section.name} — Page ${toRomanNumeral(sectionData.contentPageNum)}</a></h2><ul>`;
+        } else {
+          html += `<h2>${section.name}</h2><ul>`;
+        }
         section.species.forEach(species => {
-          html += `<li><a data-page="${species.page}">${species.name} — Page ${toRomanNumeral(species.page)}</a></li>`;
+          const speciesData = findPageData(species.name);
+          if (speciesData) {
+            html += `<li><a data-page="${speciesData.arrayIdx}">${species.name} — Page ${toRomanNumeral(speciesData.contentPageNum)}</a></li>`;
+          } else {
+            html += `<li>${species.name}</li>`;
+          }
         });
         html += `</ul>`;
       });
@@ -79,7 +121,7 @@ pages.forEach((p, idx) => {
     el.innerHTML = `<h1>${p.title}</h1><p>${p.text}</p>`;
   }
 
-  // Add page counter in roman numerals only for non-cover pages
+  // page counter in roman numerals only for non-cover pages
   if (p.type !== "cover") {
     contentPageNum++;
     const counter = document.createElement("div");
