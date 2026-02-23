@@ -20,14 +20,19 @@ const pages = [
         name: "Mana-Beasts",
         species: [
           { name: "Dragon" },
-          { name: "Terravor" },
-          { name: "Crab" }
+          { name: "Keran" },
+          { name: "Svardian Giant Crab" },
+          { name: "Oneivor" },
+          { name: "Hemovex Broodcore" },
+          { name: "Regovex Broodcore" },
+          { name: "False Owl" }
         ]
       }
     ]
   },
 
  // Pages
+  // Beasts
   {
     type: "page",
     title: "Beasts",
@@ -55,7 +60,7 @@ const pages = [
         Swift and majestic, eagles rule the air
         with unmatched vision and precision.`
     },
-
+  // Mana beasts
   {
     type: "page",
     title: "Mana-Beasts",
@@ -63,26 +68,47 @@ const pages = [
   },
     {
         type: "page",
-        title: "Dragon",
-        text: `The mightiest of all creatures.
+        title: "Dragon - Caeluarch",
+        text: `The mightiest of all sky creatures.
         
-        Ancient and terrible, dragons possess
+        Ancient and terrible, Dragons possess
         immeasurable power and wisdom.`
     },
     {
         type: "page",
-        title: "Terravor",
-        text: `The mightiest of all creatures.
+        title: "Keran - Terrarch",
+        text: `The mightiest of all land creatures.
         
-        Ancient and terrible, Terravors possess
+        Ancient and terrible, Kerans possess
         immeasurable power and wisdom.`
     },
     {
         type: "page",
-        title: "Crab",
+        title: "Svardian Giant Crab",
         text: `Crab`
     },
-
+    {
+        type: "page",
+        title: "Oneivor - Somnia Intestinum",
+        text: `s`
+    },
+  {
+        type: "page",
+        title: "Hemovex Broodcore - Sanguis Progenies",
+        text: `a`
+    },
+  {
+        type: "page",
+        title: "Regovex Broodcore - Tracto Progenies",
+        text: `C`
+    },
+  {
+        type: "page",
+        title: "False Owl - Mendax Noctua",
+        text: `C`
+    },
+  
+  // End of book
   {
     type: "page",
     title: "",
